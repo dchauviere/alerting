@@ -35,6 +35,7 @@ import com.amazon.opendistroforelasticsearch.alerting.resthandler.RestIndexMonit
 import com.amazon.opendistroforelasticsearch.alerting.resthandler.RestSearchMonitorAction
 import com.amazon.opendistroforelasticsearch.alerting.script.TriggerScript
 import com.amazon.opendistroforelasticsearch.alerting.settings.AlertingSettings
+import com.amazon.opendistroforelasticsearch.alerting.settings.DestinationMailSettings
 import org.elasticsearch.action.ActionRequest
 import org.elasticsearch.action.ActionResponse
 import org.elasticsearch.client.Client
@@ -167,12 +168,12 @@ internal class AlertingPlugin : PainlessExtension, ActionPlugin, ScriptPlugin, P
                 AlertingSettings.ALERTING_MAX_MONITORS,
                 AlertingSettings.REQUEST_TIMEOUT,
                 AlertingSettings.MAX_ACTION_THROTTLE_VALUE,
-                AlertingSettings.DESTINATION_MAIL_HOST,
-                AlertingSettings.DESTINATION_MAIL_PORT,
-                AlertingSettings.DESTINATION_MAIL_METHOD,
-                AlertingSettings.DESTINATION_MAIL_FROM,
-                AlertingSettings.DESTINATION_MAIL_USERNAME,
-                AlertingSettings.DESTINATION_MAIL_PASSWORD
+                DestinationMailSettings.DESTINATION_MAIL_HOST,
+                DestinationMailSettings.DESTINATION_MAIL_PORT,
+                DestinationMailSettings.DESTINATION_MAIL_METHOD,
+                DestinationMailSettings.DESTINATION_MAIL_FROM,
+                DestinationMailSettings.DESTINATION_MAIL_USERNAME,
+                DestinationMailSettings.DESTINATION_MAIL_PASSWORD
             )
     }
 
